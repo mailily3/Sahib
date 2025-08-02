@@ -7,6 +7,7 @@ import 'firebase_options.dart';
 import 'screens/discover_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
+import 'core/image_db.dart';
 
 void main() async {
   // ensure Flutter bindings are initialized
@@ -14,7 +15,7 @@ void main() async {
 
   // initialize Firebase with the generated options
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+  await ImageDB.init();
   runApp(const MyApp());
 }
 
